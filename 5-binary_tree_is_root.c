@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_is_root - Entry point
+ * binary_tree_is_root - Check to see if a tree node is root
  * @node: stuffs
  * Return: Always 0 (Success)
  */
