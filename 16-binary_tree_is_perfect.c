@@ -16,9 +16,9 @@ int depth(const binary_tree_t *tree)
 }
 
 /**
-* perfect - Entry point
-* @tree: tree
-* @d: d
+* perfect - Check to make sure that a binary tree is perfect
+* @tree: The pointer to the structure
+* @d: This is the depth
 * @level: level
 * Return: Always 0 (Success)
 */
@@ -39,7 +39,7 @@ perfect(tree->right, d, level + 1));
 
 /**
  * binary_tree_is_perfect - This checks to see if a binary tree is perfect.
- * @tree: This is stucture being passed.
+ * @tree: This is a pointer to the structre.
  *
  * Return: 0 for if NULL and one for success
  */
