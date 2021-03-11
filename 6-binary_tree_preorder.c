@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_t - Prints a number
+ * binary_tree_preorder - Prints a number
  * @tree: tree
  * @func: Number to be printed
  */
