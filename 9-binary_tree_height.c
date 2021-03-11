@@ -11,9 +11,9 @@ int findMax(int a, int b);
 
 int findMax(int a, int b)
 {
-	if(a >= b)
-		return a;
-	return b;
+	if (a >= b)
+		return (a);
+	return (b);
 }
 
 /**
@@ -24,8 +24,9 @@ int findMax(int a, int b)
 
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	if(tree == NULL || (tree->right == NULL && tree->left == NULL))
-		return 0;
+	if (tree == NULL || (tree->right == NULL && tree->left == NULL))
+		return (0);
 
-	return (findMax(binary_tree_height(tree->left), binary_tree_height(tree->right)) + 1);
+	return (findMax(binary_tree_height(tree->left),
+binary_tree_height(tree->right)) + 1);
 }
