@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 /**
- * binary_tree_balance - balance
- * @tree: fs
+ * binary_tree_balance - This checks to see if a binary tree is balanced
+ * @tree: The pointer to the stucture
  * Return: return
  */
 size_t height(const binary_tree_t *tree);
@@ -21,8 +21,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 }
 
 /**
- * height - Entry point
- * @tree: tree
+ * height - This gets the height of a binary tree
+ * @tree: pointer to the struct
  * Return: Always 0 (Success)
  */
 
