@@ -1,41 +1,42 @@
 #include "binary_trees.h"
 /**
- * binary_tree_is_full - This check to see if a binary tree is full.
+ * depth - This check to see if a binary tree is full.
  * @tree: This is a structure.
  *
  * Return: 0 if NULL and 0 if
  */
- int binary_tree_is_full(const binary_tree_t *tree)
- {
-	 if (tree == NULL)
+int depth(const binary_tree_t *tree)
+{
+	int d;
+
+	for (d = 0; tree != NULL; d++)
+		tree = tree->left;
+
+	return (d);
+}
+
+/**
+* perfect - Entry point
+* @tree: tree
+* @d: d
+* @level: level
+* Return: Always 0 (Success)
+*/
+
+int perfect(const binary_tree_t *tree, int d, int level)
+{
+	if (tree == NULL)
 		return (0);
 	if (tree->left == NULL && tree->right == NULL)
-		return (1);
+		return (d == level + 1);
 
-	if ((tree->left) && (tree->right))
-		return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
-	return (0);
- }
- /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-size_t binary_tree_height(const binary_tree_t *tree)
-{
-	size_t hl, hr;
-	if(tree == NULL)
+	if (tree->left == NULL || tree->right == NULL)
 		return (0);
-	hl = binary_tree_height(tree->left);
-	hr = binary_tree_height(tree->right);
-	if (hl > hr)
-	{
-		return (hl + 1);
-	}
-	else
-		return (hr + 1);
 
+	return (perfect(tree->left, d, level + 1) &&
+perfect(tree->right, d, level + 1));
 }
+
 /**
  * binary_tree_is_perfect - This checks to see if a binary tree is perfect.
  * @tree: This is stucture being passed.
@@ -44,20 +45,14 @@ size_t binary_tree_height(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int left, right, bal, full;
+	int d;
 
-	 if (!tree)
-	 	return (0);
-	
-	left = binary_tree_height(tree);
-
-	right = binary_tree_height(tree);
-	bal = left - right;
-	full = binary_tree_is_full(tree);
-
-	if (full == 1 && bal == 0)
-		return (1);
-
-	else
+	if (!tree)
 		return (0);
+
+	d = depth(tree);
+
+	if (perfect(tree, d, 0))
+		return (1);
+	return (0);
 }
