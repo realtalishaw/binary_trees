@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * findMax - Entry point
+ * findMax - finds the max of two ints
  * @a: a
  * @b: b
  * Return: Always 0 (Success)
