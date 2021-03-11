@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * main - Entry point
- *
+ * binary_tree_leaves - Entry point
+ * @tree: tree
  * Return: Always 0 (Success)
  */
 
