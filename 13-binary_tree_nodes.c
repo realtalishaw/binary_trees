@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_nodes - Entry point
- * @tree: tree
+ * binary_tree_nodes - This counts the number of nodes in a binary tree
+ * @tree: pointer to the stuct
  * Return: Always 0 (Success)
  */
 
