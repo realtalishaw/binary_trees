@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 /**
- * main - Entry point
- *
+ * binary_tree_is_root - Entry point
+ * @node: stuffs
  * Return: Always 0 (Success)
  */
 int binary_tree_is_root(const binary_tree_t *node)

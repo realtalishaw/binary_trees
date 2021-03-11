@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * main - Entry point
- *
+ * binary_tree_delete - Entry point
+ * @tree: tree
  * Return: Always 0 (Success)
  */
 void binary_tree_delete(binary_tree_t *tree)
