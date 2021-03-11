@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * findMax - Entry point
- * @a: a
- * @b: b
+ * findMax - Finds the max of two ints
+ * @a: int a
+ * @b: int b
  * Return: Always 0 (Success)
  */
 
@@ -17,8 +17,8 @@ size_t findMax(size_t a, size_t b)
 }
 
 /**
- * binary_tree_depth - words words
- * @tree: tree
+ * binary_tree_depth - This finds the depth of a tree
+ * @tree: pointer to structs
  * Return: fdsfsd
  */
 
